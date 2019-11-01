@@ -1,8 +1,9 @@
-class Api::V1::ClothController < ApplicationController
+class Api::V1::ClothesController < ApplicationController
   def process
-    pic = Picture.create(file: params[:file])
-    
-    if pic.valid?
+    pic = Picture.new
+    pic.file = params[:file]
+
+    if pic.save
       render json: { status: 200, message: 'OK' }
     else
       render json: { status: 400, message: pic.errors.full_messages.first }
