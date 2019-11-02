@@ -24,6 +24,7 @@ set :puma_worker_timeout,     nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 set :bundle_binstubs,         nil
 set :rvm_map_bins, %w{gem rake ruby rails bundle}
+set :rvm_custom_path, '/usr/share/rvm/bin/rvm'
 # set :delayed_job_workers,     2
 # set :delayed_job_pid_dir,     '/tmp'
 # set :delayed_job_queue,       :default
