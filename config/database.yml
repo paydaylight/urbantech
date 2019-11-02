@@ -26,4 +26,6 @@ test:
 
 production:
   <<: *default
-  database: urbantech
+  database: urbantech_prod
+  user: rails
+  password: rails
